@@ -10,8 +10,14 @@ int main() {
         printf("%d %s", num1, " is the bigger one.");
     }
 
-    else {
+    else if (num1 < num2)
+    {
         printf("%d %s", num2, " is the bigger one.");
+    }
+
+    else
+    {
+        printf("%s", " These two numbers are equal");
     }
 
     return 0;
