@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 int main() {
     int num = 0;
@@ -6,7 +7,11 @@ int main() {
     printf("Please enter an integer n: ");
     scanf("%d", &num);
 
-    for(int j = 2; j <= num / 2; j++){
+    for(int j = 2; j <= sqrt(num); j++){
+        if (num % 2 == 0 && num > 2) {
+            prime = 1;
+            break;
+        }
 		if(num % j == 0){
 			prime = 1;
 			break;

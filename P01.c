@@ -3,75 +3,37 @@
 #include <unistd.h>
 
 int main() {
-    int num = 0;
-    int a = 0;
+    int loop = 0;
     int b = 0;
-    int i = 0;
+    int sleeptime = 1;
 
-    printf("Enter 0 for the letter and 1 for the word: ");
-    scanf("%d", &num);
+    char x;
+    printf("Enter the letter: ");
+    scanf("%c", &x);
 
-    if (num == 0) {
-        char x;
-        printf("Enter the letter: ");
-        scanf("%c", &x);
+    printf("Enter a number for loop: ");
+    scanf("%d", &loop);
 
-        printf("\n");
-
-        printf("Enter a number for loop: ");
-        scanf("%d", &a);
-
-        while (i <= a) {
-            system("clear");
-            b = 1;
-            while (b <= i)
-            {
-                printf(" ");
-                b++;
-            }
-
-            printf("%s", x);
-            sleep(100);
-            i++;    
+    for (int i = 0; i <= loop; i++) {
+        system("clear");
+        b = 1;
+        while (b <= i)
+        {
+            printf(" ");
+            b++;
         }
+
+        printf("%c\n", x);
+        sleep(sleeptime); 
     }
 
-    return 0;
-
-    if (num == 1) {
-        int length = 0;
-
-        printf("Enter the length of the array: ");
-        char* data = (int*)malloc(length * sizeof(char));
-
-        printf("Enter each char of the array: \n");
-
-        for (int n = 0; n < length; n++) {
-        scanf("%s", &data[n]);
+    for(int i = loop - 1; i > 0; i--){ 
+        system("clear");
+        for(int j = 0; j < i; j++) {
+            printf(" ");
         }
-
-        printf("\n");
-
-        printf("Enter a number for loop: ");
-        scanf("%d", &a);
-
-        while (i <= a) {
-            system("clear");
-            b = 1;
-            while (b <= i)
-            {
-                printf(" ");
-                b++;
-            }
-
-            for (int m = 0; m < length; m++) {
-                printf("%s", data[m]);
-            }
-            sleep(100);
-            i++;    
-        }
-
-        free(data);
+         printf("%c\n",x); 
+         sleep(sleeptime); 
     }
 
     return 0;
