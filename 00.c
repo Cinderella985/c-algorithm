@@ -4,7 +4,8 @@ int main()
 {
 int p,r,n,m,temp;
 printf("请输入两个正整数n,m:");
-scanf("%d,%d,",&n,&m);
+
+scanf("%d %d", &n, &m);
 
 if(n < m)
 {
@@ -13,8 +14,7 @@ n=m;
 m=temp;
 }
 
-p=n*m;
-printf("%d\n", p);
+p = n*m;
 
 while(m!=0)
 {
