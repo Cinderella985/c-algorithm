@@ -67,9 +67,9 @@ int main(int argc, char const *argv[])
     for (i = 0; i < count; i++) {
         for (j = i + 1; j < count; j++) {
             if (strcmp(wordcount[i].word, wordcount[j].word) == 0) {
-                wordcount[i].count += wordcount[j].count;
+                wordcount[i].count += 1;//消除重复的单词
                 for (k = j + 1; k < count; k++) {
-                    strcpy(wordcount[k - 1].word, wordcount[k].word);//消除重复的单词
+                    strcpy(wordcount[k - 1].word, wordcount[k].word);//后面的向前移动
                 }
                 count--;
             }
